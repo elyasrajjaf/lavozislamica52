@@ -70,6 +70,17 @@ body{
     transform: translateX(-84%);
 }
 
+/* Home Style */
+.home .row .row a {
+    background-color: rgb(20, 20, 20);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.home .row .row a:hover {
+    background-color: #383838;
+}
+
 /* list Style */
 
 .border-bottom-list {
