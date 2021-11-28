@@ -1,0 +1,90 @@
+/* General Style */
+*{
+    margin: 0;
+}
+
+body{
+    position: relative;
+}
+
+.container-voz {
+    width: auto;
+    margin: 80px 25px 20px 205px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    height: 100%;
+    padding: 30px 50px;
+    box-sizing: border-box;
+}
+
+/* Header Style */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.menu-dashboard {
+    width: 180px;
+    height: 100vh;
+    position: absolute;
+}
+
+.menu-dashboard a{
+    color: white;
+    font-size: 15px;
+}
+
+
+.hamburger {
+    position: fixed;
+    z-index: 99;
+    bottom: 1rem;
+    left: 0.4rem;
+    cursor: pointer;
+}
+
+.hamburger i {
+    color: white;
+}
+
+.fermermenu {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateX(0);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 68%;
+    z-index: 98;
+    background: white;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.ouvrirmenu {
+    transform: translateX(-84%);
+}
+
+/* list Style */
+
+.border-bottom-list {
+    border-bottom: 5px solid #212529;
+}
+
+.row-hadith:hover {
+    background: rgba(255, 193, 7, 0.10);
+}
+
+.search-hadith:focus {
+    border: 4px solid rgba(255, 193, 7, 0.70);
+}
+
+.form-control:focus {   
+    outline: 0 !important;
+}
+
