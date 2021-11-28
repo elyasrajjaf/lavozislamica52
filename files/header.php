@@ -1,6 +1,6 @@
 <?php require 'head.php'; ?>
 <header>
-    <div class="container-fluid navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between align-items-center p-0">           
+    <div class="container-fluid navbar navbar-header navbar-expand-lg navbar-dark bg-dark d-flex justify-content-between align-items-center p-0">           
             <div class="group">
                 <a class="nav-link text-light me-3" href="home.php"><i class="text-warning me-2 fas fa-mosque"></i>La Voz Islamica</a>
             </div>
