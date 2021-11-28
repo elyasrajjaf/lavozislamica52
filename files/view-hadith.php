@@ -17,7 +17,7 @@ if (isset($_GET['id']) && !empty($_GET['id']) && is_numeric($_GET['id'])) {
 <div class="container-voz">
     <div class="mt-2"><h1>Hadiz : <?=$hadith['hadith_num'];?></h1></div>
     <div class="mt-5"></div>
-    <div class="grid d-flex justify-content-between align-items-center border-bottom border-dark">
+    <div class="grid d-flex justify-content-between align-items-center border-bottom border-dark mb-5">
         <div class="col-5">
             <p><?=$hadith['hadith_es'];?></p>
             <p><small><?=$books[$hadith['hadith_book']];?></small></p>

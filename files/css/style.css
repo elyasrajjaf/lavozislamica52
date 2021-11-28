@@ -99,3 +99,11 @@ body{
     outline: 0 !important;
 }
 
+/* Footer Style */
+footer .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
