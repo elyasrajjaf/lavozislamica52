@@ -6,6 +6,8 @@ $errors = [];
 if(!empty($_POST)){
     $safe = array_map('trim', array_map('strip_tags', $_POST));
 
+    if(count($errors) == 0){
+
     $sql = $bdd->prepare('SELECT email, password, token
                           FROM register 
                           WHERE email = :email AND password = :password');
@@ -26,10 +28,13 @@ if(!empty($_POST)){
         $_SESSION['user'] = $foundUser['user'];
         header('Location: ../home.php');
         die();
+        $form_valide = true;
 
     }else{
-        echo '<div class="alert alert-danger text-center">Error: Intente otra vez</div>';
-    }   
+        $errors[] = 'Acceso limitado a los Admins';
+		$form_valide = false;    
+    }
+}
 }
 
 ?>
@@ -55,8 +60,10 @@ if(!empty($_POST)){
 <section class="login container-fluid">
     <div class="form">
         <?php
-        if(isset($formIsValid) && $formIsValid == false){
-            echo '<div class="alert alert-danger">'.implode('<br>', $errors).'</div>';}
+        if(isset($form_valide)){
+            if($form_valide == false){
+            echo '<div style="width: 300px;" class="alert alert-danger mx-auto">'.implode('<br>', $errors).'</div>';}
+        }
         ?>
         <h3 class="mx-auto mb-4">Conectarse</h3>
         <form method="POST" class="mx-auto">
@@ -69,7 +76,7 @@ if(!empty($_POST)){
                 <input class="mb-5" type="password" name="password" id="password" placeholder="contraseña" required>
             </div>
 
-            <button class="mb-3 btn">Conecterse</button>
+            <button class="mb-3 btn">Conectarse</button>
         </form>
     </div>
 </section>

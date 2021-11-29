@@ -38,14 +38,14 @@
 
 .form .form-group input{
     border: none;
-    border-bottom: 2px solid #fbb03b;
+    border-bottom: 4px solid #fbb03b;
     width: 300px;
     padding: 10px 15px;
 }
 
 .form .form-group input:focus{
     outline: none;
-    border-bottom: 2px solid #181818;
+    border-bottom: 4px solid #181818;
 }
 
 .form .btn{
@@ -62,3 +62,6 @@
     color: white;
 }
 
+.form .alert{
+    width: 300px;
+}
