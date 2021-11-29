@@ -7,7 +7,7 @@
 
             <div class="group d-flex align-items-center">
                 <p class="text-light pt-3">As-Salamu 'Alaika<strong> Admin</strong></p>
-                <a class="nav-link text-light ms-1" href="home.php"><i class="text-warning ms-2 fas fa-power-off"></i></a>
+                <a class="nav-link text-light ms-1" href="register/logout.php"><i class="text-warning ms-2 fas fa-power-off"></i></a>
             </div> 
     </div>
 

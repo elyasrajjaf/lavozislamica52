@@ -106,9 +106,4 @@ if (!empty($_POST)) {
     </div>
 </div>
 
-<?php 
-
-require 'footer.php';
-require 'foot.php';
-
-?>
+<?php require 'foot.php'; ?>

@@ -38,7 +38,6 @@ require 'header.php';
 
 <?php 
 
-require 'footer.php';
 require 'foot.php';
 
 ?>

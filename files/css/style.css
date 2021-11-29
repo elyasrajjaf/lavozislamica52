@@ -106,19 +106,3 @@ footer .footer {
     left: 0;
     width: 100%;
 }
-
-/* Login Style */
-.login {
-    background-color: #ececec;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 200px 200px 350px 200px;
-    margin-top: -16px;
-}
-
-.login-logo {
-    width: 180px;
-}
-

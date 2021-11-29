@@ -19,7 +19,4 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     echo "Id invalida";
 }
 
-require 'footer.php';
-require 'foot.php';
-
-?>
+require 'foot.php'; ?>

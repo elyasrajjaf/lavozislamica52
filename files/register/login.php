@@ -1,15 +1,5 @@
 <?php
-session_start();
 require '../bdd/config.php';
-require '../head.php'; 
-?>
-
-<nav class="navbar navbar-expand-lg w-100 bg-dark d-flex justify-content-between px-3">
-    <a href="#" class="py-2 text-decoration-none text-light">Inicio</a>
-    <img class="login-logo py-2" src="../assets/logo.png" alt="Logo">
-</nav>
-
-<?php
 
 $errors = [];
 
@@ -31,8 +21,9 @@ if(!empty($_POST)){
     
 
     if(!empty($foundUser)){ // J'ai un utilsateur
+        session_start();
         
-        $_SESSION['user'] = $foundUser['token'];
+        $_SESSION['user'] = $foundUser['user'];
         header('Location: ../home.php');
         die();
 
@@ -43,42 +34,43 @@ if(!empty($_POST)){
 
 ?>
 
-<?php 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - La Voz Islamica</title>
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    if(isset($formIsValid) && $formIsValid == true){
-        echo '<div class="alert alert-success">Votre inscription a bien été enregistré</div>';
-    }
-    elseif(isset($formIsValid) && $formIsValid == false){
-        echo '<div class="alert alert-danger">'.implode('<br>', $errors).'</div>';
-
-    }
-?>
-
-<main class="login">
-<form method="POST" class="login-form">
-    <div style="width: 600px;" class="container form-group card text-center shadow p-3 bg-white rounded">
-
-        <h3 class="mx-auto mb-4 w-25">Conectarse</h3>
-
-        <div class="mb-3 row">
-            <label for="email" class="col-sm-3 col-form-label text-start ps-3">Email</label>
-            <div class="col-sm-9">
-            <input type="email" class="form-control" name="email" id="email" placeholder="email@ejemplo.com" required>
+<section class="login container-fluid">
+    <div class="form">
+        <?php
+        if(isset($formIsValid) && $formIsValid == false){
+            echo '<div class="alert alert-danger">'.implode('<br>', $errors).'</div>';}
+        ?>
+        <h3 class="mx-auto mb-4">Conectarse</h3>
+        <form method="POST" class="mx-auto">
+            <div class="form-group">
+                <label for="email" class="d-block mb-2">Email</label>
+                <input class="mb-3" type="email" name="email" id="email" placeholder="email@ejemplo.com" required>
             </div>
-        </div>
-
-
-        <div class="mb-3 row">
-            <label for="password" class="col-sm-3 col-form-label text-start ps-3">Contraseña</label>
-            <div class="col-sm-9">
-            <input type="password" class="form-control" name="password" id="password" placeholder="*******" required>
+            <div class="form-group">
+                <label for="password" class="d-block mb-2">Contraseña</label>
+                <input class="mb-5" type="password" name="password" id="password" placeholder="contraseña" required>
             </div>
-        </div>
 
-        <button class="btn btn-warning form-control">Conecterse</button>
-
-        <a class="mt-3 text-dark" href="inscription.php">Registrarse</a>
-
+            <button class="mb-3 btn">Conecterse</button>
+        </form>
     </div>
-</form>
-</main>
+</section>
+</body>

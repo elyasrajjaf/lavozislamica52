@@ -73,7 +73,7 @@ if (isset($_GET['id']) && !empty($_GET['id']) && is_numeric($_GET['id'])) {
             ?>
             <form method="post" enctype=”multipart/form-data”>
                 <!-- Hadith_Ar -->
-                <div class="mb-3">
+                <div class="col-6">
                     <label for="hadith_ar" class="form-label">Hadith Ar</label>
                     <textarea class="form-control" id="hadith_ar" rows="10" name="hadith_ar"><?=$hadith['hadith_ar'];?></textarea>
                 </div>

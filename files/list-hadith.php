@@ -93,11 +93,6 @@ if (!empty($_GET['filtre'])) {
     <?php endforeach;?>
 </div>
 
-<?php 
-
-require 'footer.php';
-require 'foot.php';
-
-?>
+<?php require 'foot.php'; ?>
 
 

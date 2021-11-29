@@ -30,9 +30,4 @@ if (isset($_GET['id']) && !empty($_GET['id']) && is_numeric($_GET['id'])) {
     </div>
 </div>
 
-<?php 
-
-require 'footer.php';
-require 'foot.php';
-
-?>
+<?php require 'foot.php'; ?>
