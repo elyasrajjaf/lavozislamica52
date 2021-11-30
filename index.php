@@ -1,2 +1,3 @@
-
-<H1>Inicio</H1>
+<?php 
+session_start();
+    header('Location: files/register/login.php'); ?>
